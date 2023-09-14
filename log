@@ -1018,3 +1018,24 @@ Thu 14 Sep 2023 07:54:46 PM UTC:
  tests:  11|6
 total_score: 15/70
 0722111
+Thu 14 Sep 2023 07:57:53 PM UTC: 
+ treemap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:52:39: error: ‘Tree_Node’ undeclared (first use in this function); did you mean ‘TreeNode’?
+   52 |     TreeNode* newNode = malloc(sizeof(Tree_Node));
+      |                                       ^~~~~~~~~
+      |                                       TreeNode
+treemap.c:52:39: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:53:12: error: ‘TreeNode’ has no member named ‘key’
+   53 |     newNode->key = key;
+      |            ^~
+treemap.c:54:12: error: ‘TreeNode’ has no member named ‘data’
+   54 |     newNode->data = data;
+      |            ^~
+treemap.c:54:21: error: ‘data’ undeclared (first use in this function)
+   54 |     newNode->data = data;
+      |                     ^~~~
+Compilation failed
+715039a
