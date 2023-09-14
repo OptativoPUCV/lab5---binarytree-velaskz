@@ -5,7 +5,6 @@
 
 typedef struct TreeNode TreeNode;
 
-
 struct TreeNode {
     Pair* pair;
     TreeNode * left;
@@ -38,7 +37,11 @@ TreeNode * createTreeNode(void* key, void * value) {
 
 TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
 
-    //new->lower_than = lower_than;
+    Treemap * mapa = (Treemap *)malloc(sizeof(Treemap));
+    if (Treemap == NULL) return NULL;
+    map->root = NULL;
+    
+    
     return NULL;
 }
 

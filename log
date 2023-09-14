@@ -2,3 +2,30 @@ Thu 14 Sep 2023 07:06:24 PM UTC:
  tests:  1|8
 total_score: 0/70
 249a50a
+Thu 14 Sep 2023 07:11:29 PM UTC: 
+ treemap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:40:5: error: unknown type name ‘Treemap’; did you mean ‘TreeMap’?
+   40 |     Treemap * mapa = (Treemap *)malloc(sizeof(Treemap));
+      |     ^~~~~~~
+      |     TreeMap
+treemap.c:40:23: error: ‘Treemap’ undeclared (first use in this function); did you mean ‘TreeMap’?
+   40 |     Treemap * mapa = (Treemap *)malloc(sizeof(Treemap));
+      |                       ^~~~~~~
+      |                       TreeMap
+treemap.c:40:23: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:40:32: error: expected expression before ‘)’ token
+   40 |     Treemap * mapa = (Treemap *)malloc(sizeof(Treemap));
+      |                                ^
+treemap.c:42:5: error: ‘map’ undeclared (first use in this function); did you mean ‘mapa’?
+   42 |     map->root = NULL;
+      |     ^~~
+      |     mapa
+treemap.c:40:15: error: unused variable ‘mapa’ [-Werror=unused-variable]
+   40 |     Treemap * mapa = (Treemap *)malloc(sizeof(Treemap));
+      |               ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0d981a0
