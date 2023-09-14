@@ -29,3 +29,23 @@ treemap.c:40:15: error: unused variable ‘mapa’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 0d981a0
+Thu 14 Sep 2023 07:11:47 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:41:9: error: ‘Treemap’ undeclared (first use in this function); did you mean ‘TreeMap’?
+   41 |     if (Treemap == NULL) return NULL;
+      |         ^~~~~~~
+      |         TreeMap
+treemap.c:41:9: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:42:5: error: ‘map’ undeclared (first use in this function); did you mean ‘mapa’?
+   42 |     map->root = NULL;
+      |     ^~~
+      |     mapa
+treemap.c:40:15: error: unused variable ‘mapa’ [-Werror=unused-variable]
+   40 |     TreeMap * mapa = (TreeMap *)malloc(sizeof(TreeMap));
+      |               ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+69f1b91
