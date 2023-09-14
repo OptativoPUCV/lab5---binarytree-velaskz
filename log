@@ -144,3 +144,33 @@ Thu 14 Sep 2023 07:14:37 PM UTC:
  tests:  4|7
 total_score: 5/70
 f2363f0
+Thu 14 Sep 2023 07:16:55 PM UTC: 
+ treemap.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:79:5: error: unknown type name ‘Tree_Node’; did you mean ‘TreeNode’?
+   79 |     Tree_Node* temp = tree->root;
+      |     ^~~~~~~~~
+      |     TreeNode
+treemap.c:79:23: error: initialization of ‘int *’ from incompatible pointer type ‘TreeNode *’ [-Werror=incompatible-pointer-types]
+   79 |     Tree_Node* temp = tree->root;
+      |                       ^~~~
+treemap.c:82:23: error: request for member ‘key’ in something not a structure or union
+   82 |         if(key == temp->key)
+      |                       ^~
+treemap.c:83:24: error: request for member ‘data’ in something not a structure or union
+   83 |             return temp->data;
+      |                        ^~
+treemap.c:84:27: error: request for member ‘key’ in something not a structure or union
+   84 |         else if(key < temp->key)
+      |                           ^~
+treemap.c:85:24: error: request for member ‘left’ in something not a structure or union
+   85 |             temp = temp->left;
+      |                        ^~
+treemap.c:87:24: error: request for member ‘right’ in something not a structure or union
+   87 |             temp = temp->right;
+      |                        ^~
+cc1: all warnings being treated as errors
+Compilation failed
+afe6ed4
