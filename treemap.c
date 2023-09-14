@@ -90,20 +90,9 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
         else{
             current = current->left;
         }
-        tree->current = parent;
     }
+    tree->current = parent;
     return NULL;
-
-    /*while(temp != NULL) {
-        if(key == temp->key)
-            return temp->data;
-        else if(key < temp->key)
-            temp = temp->left;
-        else
-            temp = temp->right;
-    }
-    
-    return NULL;*/
 }
 
 
