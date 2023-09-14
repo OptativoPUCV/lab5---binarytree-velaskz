@@ -93,7 +93,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
                 current = current->left;
             }
         }  
-        tree->current = parent;
+        //tree->current = parent;
     }
     
     return NULL;
