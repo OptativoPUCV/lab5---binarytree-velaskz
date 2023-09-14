@@ -78,6 +78,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     
     while(current != NULL){
         if(is_equal(tree, current->pair->key, key) == 1){
+            printf("se econtró el dato");
             tree->current = current;
             return current->pair;
         }
