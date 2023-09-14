@@ -207,3 +207,33 @@ treemap.c:96:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 feeadf5
+Thu 14 Sep 2023 07:26:24 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:76:24: error: initialization of ‘TreeMap *’ from incompatible pointer type ‘TreeNode *’ [-Werror=incompatible-pointer-types]
+   76 |     TreeMap* current = tree->root;
+      |                        ^~~~
+treemap.c:77:5: error: unknown type name ‘Treemap’; did you mean ‘TreeMap’?
+   77 |     Treemap* parent = NULL;
+      |     ^~~~~~~
+      |     TreeMap
+treemap.c:79:34: error: ‘TreeMap’ has no member named ‘pair’
+   79 |         if(is_equal(tree, current->pair->key, key)){
+      |                                  ^~
+treemap.c:80:27: error: assignment to ‘TreeNode *’ from incompatible pointer type ‘TreeMap *’ [-Werror=incompatible-pointer-types]
+   80 |             tree->current = current;
+      |                           ^
+treemap.c:81:20: error: returning ‘TreeMap *’ from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   81 |             return current;
+      |                    ^~~~~~~
+treemap.c:77:14: error: unused variable ‘parent’ [-Werror=unused-variable]
+   77 |     Treemap* parent = NULL;
+      |              ^~~~~~
+treemap.c:96:1: error: control reaches end of non-void function [-Werror=return-type]
+   96 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+6f51684
