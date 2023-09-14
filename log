@@ -387,3 +387,48 @@ treemap.c:102:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 6bf4726
+Thu 14 Sep 2023 07:40:59 PM UTC: 
+ treemap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:76:24: error: initialization of ‘TreeMap *’ from incompatible pointer type ‘TreeNode *’ [-Werror=incompatible-pointer-types]
+   76 |     TreeMap* current = tree->root;
+      |                        ^~~~
+treemap.c:77:5: error: unknown type name ‘Treemap’; did you mean ‘TreeMap’?
+   77 |     Treemap* parent = NULL;
+      |     ^~~~~~~
+      |     TreeMap
+treemap.c:80:34: error: ‘TreeMap’ has no member named ‘pair’
+   80 |         if(is_equal(tree, current->pair->key, key)){
+      |                                  ^~
+treemap.c:81:27: error: assignment to ‘TreeNode *’ from incompatible pointer type ‘TreeMap *’ [-Werror=incompatible-pointer-types]
+   81 |             tree->current = current;
+      |                           ^
+treemap.c:82:27: error: ‘TreeMap’ has no member named ‘pair’
+   82 |             return current->pair;
+      |                           ^~
+treemap.c:85:16: error: assignment to ‘int *’ from incompatible pointer type ‘TreeMap *’ [-Werror=incompatible-pointer-types]
+   85 |         parent = current;
+      |                ^
+treemap.c:86:51: error: ‘TreeMap’ has no member named ‘pair’
+   86 |         int comparacion = tree->lower_than(current->pair->key, key);
+      |                                                   ^~
+treemap.c:88:30: error: ‘TreeMap’ has no member named ‘right’
+   88 |             current = current->right;
+      |                              ^~
+treemap.c:91:30: error: ‘TreeMap’ has no member named ‘left’
+   91 |             current = current->left;
+      |                              ^~
+treemap.c:93:23: error: assignment to ‘TreeNode *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+   93 |         tree->current = parent;
+      |                       ^
+treemap.c:95:5: error: expected ‘;’ before ‘}’ token
+   95 |     }
+      |     ^
+treemap.c:107:1: error: control reaches end of non-void function [-Werror=return-type]
+  107 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+f8ca5e7
