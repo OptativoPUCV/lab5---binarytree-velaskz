@@ -84,6 +84,9 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
         
         parent = current;
         int comparacion = tree->lower_than(current->pair->key, key);
+        if (comparacion == 1){
+            return current->pair;
+        }
     }
 
     /*while(temp != NULL) {
