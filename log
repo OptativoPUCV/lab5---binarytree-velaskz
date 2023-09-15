@@ -1126,3 +1126,22 @@ treemap.c:115:28: error: ‘TreeNode’ has no member named ‘root’
       |                            ^~
 Compilation failed
 645b70a
+Fri 15 Sep 2023 06:08:34 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:115:27: error: ‘TreeNode’ has no member named ‘root’
+  115 |     TreeMap* parent = node->root;
+      |                           ^~
+treemap.c:119:23: error: ‘TreeMap’ has no member named ‘left’
+  119 |             if (parent->left == node){
+      |                       ^~
+treemap.c:120:23: error: ‘TreeMap’ has no member named ‘left’
+  120 |                 parent->left = NULL;
+      |                       ^~
+treemap.c:123:23: error: ‘TreeMap’ has no member named ‘right’
+  123 |                 parent->right = NULL;
+      |                       ^~
+Compilation failed
+8e7dc27
