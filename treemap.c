@@ -134,10 +134,9 @@ void removeNode(TreeMap * tree, TreeNode* node) {
                 parent->right = node->left;
             }
         } else {
-            // El nodo es la raíz del árbol
             tree->root = node->left;
         }
-        //node->left->parent = parent;
+        node->left->parent = parent;
         free(node);
     }
 }
