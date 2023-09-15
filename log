@@ -1251,3 +1251,26 @@ treemap.c:214:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 bc46e6e
+Fri 15 Sep 2023 11:45:41 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘firstTreeMap’:
+treemap.c:208:24: error: initialization of ‘TreeMap *’ from incompatible pointer type ‘TreeNode *’ [-Werror=incompatible-pointer-types]
+  208 |     TreeMap* current = tree->root;
+      |                        ^~~~
+treemap.c:210:18: error: ‘TreeMap’ has no member named ‘left’
+  210 |     while(current->left != NULL){
+      |                  ^~
+treemap.c:211:26: error: ‘TreeMap’ has no member named ‘left’
+  211 |         current = current->left;
+      |                          ^~
+treemap.c:213:19: error: ‘TreeMap’ has no member named ‘pair’
+  213 |     return current->pair;
+      |                   ^~
+treemap.c:214:1: error: control reaches end of non-void function [-Werror=return-type]
+  214 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+c7c7754
