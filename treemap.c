@@ -95,16 +95,14 @@ TreeNode * minimum(TreeNode * x){
     if (x->left == NULL){
         return x;
     }
-    else{
-        TreeNode* current = x;
-        while (current != NULL){
-            if(current->left == NULL){
-                return current;
-            }
+    TreeNode* current = x;
+    while (current != NULL){
+        if(current->left == NULL){
+            return current;
         }
     }
-
 }
+
 
 
 void removeNode(TreeMap * tree, TreeNode* node) {
