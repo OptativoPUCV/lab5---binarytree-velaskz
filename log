@@ -1039,3 +1039,9 @@ treemap.c:54:21: error: ‘data’ undeclared (first use in this function)
       |                     ^~~~
 Compilation failed
 715039a
+Fri 15 Sep 2023 01:35:36 AM UTC: 
+ treemap.c | 43 ++++++++++++++++++++++++++++++++++++++-----
+ 1 file changed, 38 insertions(+), 5 deletions(-)
+ tests:  13|5
+total_score: 25/70
+100c554
