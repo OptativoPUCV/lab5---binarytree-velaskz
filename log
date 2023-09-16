@@ -1372,3 +1372,23 @@ Sat 16 Sep 2023 02:10:43 AM UTC:
  tests:  29|0
 total_score: 70/70
 b1d20c6
+Sat 16 Sep 2023 02:11:16 AM UTC: 
+ treemap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:210:23: error: implicit declaration of function ‘siguienteTreeMap’; did you mean ‘insertTreeMap’? [-Werror=implicit-function-declaration]
+  210 |     Pair* siguiente = siguienteTreeMap(tree);
+      |                       ^~~~~~~~~~~~~~~~
+      |                       insertTreeMap
+treemap.c:210:23: error: initialization of ‘Pair *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+treemap.c: At top level:
+treemap.c:230:8: error: conflicting types for ‘siguienteTreeMap’; have ‘Pair *(TreeMap *)’
+  230 | Pair * siguienteTreeMap(TreeMap * tree) {
+      |        ^~~~~~~~~~~~~~~~
+treemap.c:210:23: note: previous implicit declaration of ‘siguienteTreeMap’ with type ‘int()’
+  210 |     Pair* siguiente = siguienteTreeMap(tree);
+      |                       ^~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7850638
