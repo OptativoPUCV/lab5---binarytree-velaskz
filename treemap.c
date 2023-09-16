@@ -223,8 +223,7 @@ Pair * nextTreeMap(TreeMap * tree) {
         tree->current = minimo;
         return minimo->pair;
     }
-        while (current != NULL)
-    {
+    while (current != NULL){
     if (current->parent != NULL && tree->lower_than(current->pair->key,current->parent->pair->key)){
         tree->current = current->parent;
         return current->parent->pair;
