@@ -1392,3 +1392,18 @@ treemap.c:210:23: note: previous implicit declaration of ‘siguienteTreeMap’ 
 cc1: all warnings being treated as errors
 Compilation failed
 7850638
+Sat 16 Sep 2023 02:11:33 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/cc3SHUZJ.o: in function `next_test1':
+test.c:(.text+0xfe0): undefined reference to `nextTreeMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/cc3SHUZJ.o: in function `next_test2':
+test.c:(.text+0x1063): undefined reference to `nextTreeMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x10a0): undefined reference to `nextTreeMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x10d8): undefined reference to `nextTreeMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/cc3SHUZJ.o: in function `next_test3':
+test.c:(.text+0x1184): undefined reference to `nextTreeMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/cc3SHUZJ.o:test.c:(.text+0x383): more undefined references to `nextTreeMap' follow
+collect2: error: ld returned 1 exit status
+Compilation failed
+1eeb78a

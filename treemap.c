@@ -207,7 +207,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
         return tree->current->pair;
     }
 
-    Pair* siguiente = siguienteTreeMap(tree);
+    Pair* siguiente = nextTreeMap(tree);
     if (siguiente != NULL) {
         return siguiente; 
     }
