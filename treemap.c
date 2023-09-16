@@ -203,7 +203,6 @@ Pair * upperBound(TreeMap * tree, void* key) {
         return buscado; 
     }
 
-dwefwef
     if (!tree->lower_than(tree->current->pair->key, key)) {
         return tree->current->pair;
     }

@@ -1366,3 +1366,9 @@ treemap.c:212:9: error: ‘next’ undeclared (first use in this function)
       |         ^~~~
 Compilation failed
 8b7c732
+Sat 16 Sep 2023 02:10:43 AM UTC: 
+ treemap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  29|0
+total_score: 70/70
+b1d20c6
