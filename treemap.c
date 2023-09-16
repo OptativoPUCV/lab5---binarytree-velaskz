@@ -214,5 +214,12 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    return NULL;
+    if (tree == NULL || tree->current == NULL){
+        return NULL;
+    }
+
+    if (tree->current->right != NULL){
+        return tree->current->pair;
+    }
+    
 }
