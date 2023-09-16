@@ -1346,3 +1346,23 @@ Sat 16 Sep 2023 01:54:48 AM UTC:
  tests:  25|1
 total_score: 60/70
 5c6aa0b
+Sat 16 Sep 2023 02:10:33 AM UTC: 
+ treemap.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:206:1: error: ‘dwefwef’ undeclared (first use in this function)
+  206 | dwefwef
+      | ^~~~~~~
+treemap.c:206:1: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:206:8: error: expected ‘;’ before ‘if’
+  206 | dwefwef
+      |        ^
+      |        ;
+  207 |     if (!tree->lower_than(tree->current->pair->key, key)) {
+      |     ~~  
+treemap.c:212:9: error: ‘next’ undeclared (first use in this function)
+  212 |     if (next != NULL) {
+      |         ^~~~
+Compilation failed
+8b7c732
